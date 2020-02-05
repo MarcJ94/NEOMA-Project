@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MSc Finance & Big Data - Data visualization 2020</title>
+
+  <!-- bulma and font awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" crossorigin="anonymous">
+</head>
+
+<!-- body -->
+<body>
+
+  <!-- header -->
+  <section class="hero is-info is-bold">
+    <!-- todo: change assignment and name -->
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Data Visualization Assignment
+        </h1>
+        <h2 class="subtitle">
+          Bennis Othmane
+        </h2>
+      </div>
+    </div>
+
+    <!-- change navigation if needed -->
+    <div class="hero-foot">
+      <div class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+
+          <div class="navbar-brand">
+            <a class="navbar-item" href="#top">
+              <span class="icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>Home</span>
+            </a>
+          </div>
+
+          <div id="main-navbar" class="navbar-menu">
+            <a class="navbar-item" href="#viz1">
+              <span class="icon">
+                <i class="fas fa-chart-area"></i>
+              </span>
+              <span>Visualization 1</span>
+            </a>
+          </div>
+
+          <div class="navbar-end">
+            <a class="navbar-item" href="#about">
+              <span class="icon">
+                <i class="fas fa-info-circle"></i>
+              </span>
+              <span>About</span>
+            </a>
+          </div>
+
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content">
+      <!-- modify if necessary (move visualizations in separate pages) -->
+      <h2 id="viz1">Visualization 1</h2>
+
+      <svg width="100%" height="400" style="background-color: whitesmoke; border: 1px solid black;">
+      </svg>
+
+      <h3>Interpretation</h3>
+
+      <p>
+        Provide a brief discussion of how to interpret this visualization. Legends provided with the visualization can be self-explanatory, keep it short.
+     By combining the location of deaths related to cholera with locations of the water pumps, the map is able to show us that the majority were clustered around public water pump.
+the visualization show clearly a connection between location of water pump and the cluster of deaths (people was contaminated by public water).
+      </p>
+
+      <h3>Discussion</h3>
+
+      <p>
+        Provide a brief discussion of the key findings of the visualization, any challenges encountered creating the visualization etc.
+     I was pretty impressed about the power of folium module.
+The main challenge is to start using it, Once it's done, it becomes quickly a user friendly package with a really interesting items to visualize a map.
+      
+      </p>
+
+      <h3>Sources</h3>
+
+      <p>
+        Provide sources for the dataset, any code used, and design inspirations here. Dishonesty will result in a 0 for the assignment or the <strong>entire course</strong>.
+      Robin Wilson’s blog
+      OpenstreetMap
+      Datacamp
+        Code :
+ import folium
+ import pandas as pd
+
+deaths=pd.read_csv('/Users/otb/Desktop/deaths.csv')
+deaths
+# Rename your columns
+
+newcols = {
+    'Death': 'death_count',
+    'X coordinate': 'x_latitude', 
+    'Y coordinate': 'y_longitude' 
+    }
+
+deaths.rename(columns=newcols, inplace=True)
+
+locations = deaths[['x_latitude', 'y_longitude']]
+deaths_list = locations.values.tolist()
+deaths_list 
+map = folium.Map(location=[51.5132119,-0.13666], tiles='Stamen Toner', zoom_start=18)
+for point in range(0, len(deaths_list)):
+    folium.CircleMarker(deaths_list[point], radius=18, color='red', fill=True, fill_color='red', opacity = 0.4).add_to(map)
+map
+        
+# Import the data
+pumps = pd.read_csv('/Users/otb/Desktop/pumps.csv')
+
+# Subset the DataFrame 
+locations_pumps = pumps[['X coordinate', 'Y coordinate']]
+
+# Transform the DataFrame to list of lists 
+pumps_list = locations_pumps.values.tolist()
+
+# Create a for loop (use previous map)
+map1 = map
+for point in range(0, len(pumps_list)):
+    folium.Marker(pumps_list[point], popup=pumps['Pump Name'][point]).add_to(map1)
+map1
+
+#output Visualization on the link
+        
+      </p>
+    </div>
+  </section>
+
+  <hr class="container">
+
+  <!-- about section -->
+  <!-- fill in, or link to a personal web page  -->
+  <section class="section">
+    <div class="container content">
+      <h2 id="about">
+        About Me
+      </h2>
+
+      <div class="media">
+        <div class="media-left">
+          <p class="image is-128x128">
+            <!-- replace with your profile image -->
+            <img src="https://raw.githubusercontent.com/mscfinance-big-data-viz/indiv-assignment-template/master/Visualization%20of%20cholera%20deaths.png">
+          </p>
+        </div>
+
+        <div class="media-content">
+            <p>
+              <!-- replace with your information -->
+              <strong>Bennis Othmane</strong>
+              <br/>
+              Brief biography describing your interests and skills, a profile photo, and/or links to your Github, Linkedin, and other <strong>professional</strong> social media accounts.
+              <br/>
+              <!-- find brand icons at: https://fontawesome.com/icons?d=gallery&s=brands&m=free -->
+              <a href="https://github.com/">
+                <span class="fab fa-github"></span>
+                <span>Github</span>
+              </a>
+              &bullet;
+              <a href="https://www.linkedin.com/">
+                <span class="fab fa-linkedin"></span>
+                <span>LinkedIn</span>
+              </a>
+            </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <small>
+        <a href="#top">
+          <span class="fas fa-arrow-up"></span>
+          <span>Back to Top</span>
+        </a>
+        <br/>
+        <a href="https://www.neoma-bs.fr/formations/masteres-specialises-masters-of-science-temps-partiel/msc-in-finance-and-big-data/presentation-du-programme">MSc Finance & Big Data / Data visualization</a>
+        &bullet;
+        <a href="https://https://www.neoma-bs.fr/">Neoma Business School</a>
+      </small>
+    </div>
+  </footer>
+
+</body>
+</html>

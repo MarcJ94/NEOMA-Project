@@ -47,3 +47,9 @@ For row data and data with PCA, we compute dendrogram and the Elbow Method to de
 
 ![Compute dendrogram](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Dendrogram.png)
 ![The Elbow Method](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Elbow%20Method.png)
+
+As it is a data vizualization courses, more clusters than the optimal number has been choosen. ALl parameters can be change in the notebook.
+
+After computing clusters, we obtain with the librairy Geopandas this dataframe : 
+
+![The Elbow Method](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20DataFrame.png)

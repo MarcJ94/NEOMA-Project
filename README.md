@@ -41,3 +41,5 @@ An PCA has been made on data in order to get less columns.
 
 Sources : 
 https://towardsdatascience.com/an-approach-to-choosing-the-number-of-components-in-a-principal-component-analysis-pca-3b9f3d6e73fe
+
+

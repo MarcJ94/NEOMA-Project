@@ -39,11 +39,11 @@ An PCA has been made on data in order to get less columns.
 Sources : 
 https://towardsdatascience.com/an-approach-to-choosing-the-number-of-components-in-a-principal-component-analysis-pca-3b9f3d6e73fe
 
-![Part on the 8602 points around France](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/PCA.png)
+![Define numbers of components for the PCA](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/PCA.png)
 
 The links explain in detail how to choose the number of columns for the PCA.
 
 For row data and data with PCA, we compute dendrogram and the Elbow Method to determine the number of cluster.
 
-![Part on the 8602 points around France](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Drendrogram.png)
-![Part on the 8602 points around France](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Elbow Method.png)
+![Compute dendrogram](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Drendrogram.png)
+![The Elbpw Method](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Elbow Method.png)

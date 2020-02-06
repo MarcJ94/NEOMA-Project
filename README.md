@@ -17,4 +17,4 @@ The uploaded data are in text format. For 8602 land points in France, the means 
 
 the means of the various annual precipitation indices and number of days of precipitation, on the 8602 land points in mainland France over the reference period (1976-2005) 
 
-![Part on the 8602 points around France](/Screen Files/Screen 1.png)
+![Part on the 8602 points around France](Screen Files/Screen 1.png)

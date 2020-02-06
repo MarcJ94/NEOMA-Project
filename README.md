@@ -15,12 +15,9 @@ https://www.data.gouv.fr/fr/datasets/indices-annuels-de-temperature-et-nombre-de
 
 The uploaded data are in text format. For 8602 land points in France, the means of meteorologicals annuals data from 1976 to 2005 has been collected.
 
-
-the means of the various annual precipitation indices and number of days of precipitation, on the 8602 land points in mainland France over the reference period (1976-2005) 
-
 ![Part on the 8602 points around France](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Screen%201.png)
 
-After fews data preparation, we obtain a dataframe of around 25k rows and 32 columns.
+After fews data preparation (data transformation and normalization, ...), we obtain a dataframe of around 25k rows and 32 columns.
 Each columns is a meteorological caracteristic. 
 
 Below, examples of data collected : 
@@ -42,4 +39,11 @@ An PCA has been made on data in order to get less columns.
 Sources : 
 https://towardsdatascience.com/an-approach-to-choosing-the-number-of-components-in-a-principal-component-analysis-pca-3b9f3d6e73fe
 
+![Part on the 8602 points around France](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/PCA.png)
 
+The links explain in detail how to choose the number of columns for the PCA.
+
+For row data and data with PCA, we compute dendrogram and the Elbow Method to determine the number of cluster.
+
+![Part on the 8602 points around France](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Drendrogram.png)
+![Part on the 8602 points around France](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Elbow Method.png)

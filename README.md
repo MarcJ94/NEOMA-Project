@@ -52,4 +52,14 @@ As it is a data vizualization courses, more clusters than the optimal number has
 
 After computing clusters, we obtain with the librairy Geopandas this dataframe : 
 
-![The Elbow Method](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20DataFrame.png)
+![Final DataFrame](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20DataFrame.png)
+
+
+# Plotting Clusters
+
+The clusters are plot with : 
+- Matplotlib
+- Plotly 
+
+![Plotting with Matplotlib](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20Matplotlib.png)
+![Plotting with Plotly](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20Plotlib.png)

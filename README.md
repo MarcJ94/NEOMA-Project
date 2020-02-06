@@ -73,6 +73,5 @@ After reducing the number of columns, we see a loss of information, especially o
 
 The Agglomerative Clustering method seems to be the most adapted for these data but many parameters have to be taken into account such as the non-optimal number of clusters here.
 
-Les 4 graphiques effectués avec Plotly permettent de voir en détail les zones de chaque cluster et sont beaucoup plus adaptés à ce type de visualisation. 
-
+The 4 graphs made with Plotly allow to see in detail the zones of each cluster and are much more adapted to this type of visualization.
 

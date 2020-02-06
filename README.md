@@ -1,5 +1,5 @@
 # NEOMA-Project
-Data Vizualization 
+Data Visualization 
 
 The notebook Individual Project provides you details about how I created this picture. 
 It provides you also additionnals informations and plots (dynamics plots and explanations).
@@ -48,7 +48,7 @@ For row data and data with PCA, we compute dendrogram and the Elbow Method to de
 ![Compute dendrogram](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Dendrogram.png)
 ![The Elbow Method](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Elbow%20Method.png)
 
-As it is a data vizualization courses, more clusters than the optimal number has been choosen. ALl parameters can be change in the notebook.
+As it is a data visualization courses, more clusters than the optimal number has been choosen. ALl parameters can be change in the notebook.
 
 After computing clusters, we obtain with the librairy Geopandas this dataframe : 
 
@@ -62,4 +62,17 @@ The clusters are plot with :
 - Plotly 
 
 ![Plotting with Matplotlib](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20Matplotlib.png)
-![Plotting with Plotly](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20Plotlib.png)
+![Plotting with Plotly](https://github.com/MarcJ94/NEOMA-Project/blob/master/Screen%20Files/Clustering%20Plotly.png)
+
+4 plotly graphics are available on the notebook.
+
+# Conclusion
+
+For the 4 clustering methods, it can be observed that the high-altitude areas are well listed. 
+After reducing the number of columns, we see a loss of information, especially on the coastal areas. These zones are well defined for the clustering methods without PCA.  
+
+The Agglomerative Clustering method seems to be the most adapted for these data but many parameters have to be taken into account such as the non-optimal number of clusters here.
+
+Les 4 graphiques effectués avec Plotly permettent de voir en détail les zones de chaque cluster et sont beaucoup plus adaptés à ce type de visualisation. 
+
+

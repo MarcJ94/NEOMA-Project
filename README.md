@@ -1,8 +1,5 @@
-# NEOMA-Project
-Data Visualization 
-
-The notebook Individual Project provides you details about how I created this picture. 
-It provides you also additionnals informations and plots (dynamics plots and explanations).
+#The notebook Individual Project provides you details about how I created this picture. 
+#It provides you also additionnals informations and plots (dynamics plots and explanations).
 
 
 # The objective is to compare clustering methods on meteorological data
